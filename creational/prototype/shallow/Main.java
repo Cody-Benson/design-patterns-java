@@ -16,6 +16,8 @@ public class Main {
 
         try {
             CarShop shop3 = (CarShop) shop1.clone();
+            Car civic = new Car("civic",4);
+            shop1.addCar(civic);
             shop3.printCars();
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();

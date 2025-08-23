@@ -1,3 +1,0 @@
-interface Prototype extends Cloneable{
-    
-}
