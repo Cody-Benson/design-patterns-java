@@ -1,26 +1,22 @@
 public class Main {
     public static void main(String[] args){
-        Car model3 = new Car("model 3", 4);
-        Car roadster = new Car("roadster", 2);
+        System.out.println("deep copy example");
+        Color color = new Color("red");
+        ShapePrototype circlePrototype = new Circle(5,color);
 
-        CarShop shop1 = new CarShop();
-        shop1.addCar(model3);
-        shop1.addCar(roadster);
+        Circle circle1 = (Circle) circlePrototype.clone();
+        Circle circle2 = (Circle) circlePrototype.clone();
 
-        shop1.printCars();
+        Color circle1Color = circle1.getColor();
+        Color circle2Color = circle2.getColor();
 
-        CarShop shop2 = new CarShop();
-        shop2.addCar(model3);
-        shop2.addCar(roadster);
-        shop2.printCars();
+        System.out.println("circle1 color is:" + circle1Color.getColor());
+        System.out.println("circle2 color is:" + circle2Color.getColor());
 
-        try {
-            CarShop shop3 = (CarShop) shop1.clone();
-            Car civic = new Car("civic",4);
-            shop1.addCar(civic);
-            shop3.printCars();
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
+        circle1Color.setColor("blue");
+
+        System.out.println("color is a shallow copy. both change at the same time.");
+        System.out.println("circle1 color is:" + circle1Color.getColor());
+        System.out.println("circle2 color is:" + circle2Color.getColor());
     }
 }
