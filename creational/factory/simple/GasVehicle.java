@@ -1,4 +1,3 @@
-package simple;
 public class GasVehicle implements Vehicle{
     @Override
     public void recharge(){

@@ -1,4 +1,3 @@
-package simple;
 public class CarFactory {
     public Vehicle orderVehicle(String request){
         Vehicle vehicle = null;
