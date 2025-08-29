@@ -1,0 +1,3 @@
+interface Saludor {
+    void diceHola();
+}
