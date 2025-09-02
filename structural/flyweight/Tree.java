@@ -1,9 +1,11 @@
 public class Tree {
+    //extrinsic state
     public int position;
-    public String color;
-
-    public Tree(int position, String color){
+    //intrinsic state
+    public TreeType treeType;
+    
+    public Tree(int position, TreeType treeType){
         this.position = position;
-        this.color = color;
+        this.treeType = treeType;
     }
 }
