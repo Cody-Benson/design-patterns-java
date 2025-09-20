@@ -19,6 +19,13 @@ public class House {
         private int windows = 0;
         private boolean yard = false;
 
+
+        public HouseBuilder(){
+            this.doors = 0;
+            this.windows = 0;
+            this.yard = false;
+        }
+
         public HouseBuilder setDoors(int doors){
             this.doors = doors;
             return this;
@@ -37,5 +44,9 @@ public class House {
         public House build(){
             return new House(this);
         }
+    }
+
+    public static HouseBuilder builder(){
+        return new HouseBuilder();
     }
 }
